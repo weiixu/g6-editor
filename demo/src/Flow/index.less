@@ -1,0 +1,69 @@
+.editor {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+.editorHd {
+  padding: 8px;
+  border: 1px solid #e6e9ed;
+}
+
+.editorBd {
+  flex: 1;
+}
+
+.editorSidebar,
+.editorContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.editorSidebar {
+  background: #fafafa;
+
+  &:first-child {
+    border-right: 1px solid #e6e9ed;
+  }
+
+  &:last-child {
+    border-left: 1px solid #e6e9ed;
+  }
+}
+
+.flow,
+.mind,
+.koni {
+  flex: 1;
+  // https://github.com/philipwalton/flexbugs/issues/197#issuecomment-378908438
+  height: 0;
+}
+
+.flowToolbarMap {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px;
+  z-index: 100;
+}
+
+.editorMinimapWrap {
+  // display: none;
+  position: absolute;
+  top: 100%;
+  right: 5px;
+  width: 260px;
+  z-index: 100;
+  background-color: #fff;
+  border: 1px solid #eee;
+
+  :global {
+    .ant-card {
+      background-color: #eee;
+    }
+  }
+}
